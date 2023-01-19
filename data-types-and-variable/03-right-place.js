@@ -13,7 +13,6 @@ function rightPlace(string1, char, string2) {
     }
 
     console.log((newString === string2) ? 'Matched' : 'Not Matched');
-
 }
 
 rightPlace('Str_ng', 'I', 'Strong');
