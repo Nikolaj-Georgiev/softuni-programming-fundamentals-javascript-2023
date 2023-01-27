@@ -15,8 +15,6 @@ function condense(array) {
         }
         console.log(array.join(''));
     }
-
-
 }
 
 condense([2, 10, 3]);
