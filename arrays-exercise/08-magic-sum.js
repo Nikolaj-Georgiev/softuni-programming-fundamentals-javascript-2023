@@ -92,8 +92,6 @@ function magicSum3(numArray, uniqueNumber) {
             let secondElement = numArray[j];
             sum = firstElement + secondElement;
             if (sum === uniqueNumber) {
-                sumArr.push(firstElement);
-                sumArr.push(secondElement);
                 console.log(firstElement + ' ' + secondElement);
 
             }
