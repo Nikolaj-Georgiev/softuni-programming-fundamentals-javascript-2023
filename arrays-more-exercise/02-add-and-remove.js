@@ -8,7 +8,7 @@ function addAndRemove(stringArray) {
         if (command === 'add') {
             resultArr.push(number);
         } else {
-            resultArr.pop()
+            resultArr.pop();
         }
     }
 
