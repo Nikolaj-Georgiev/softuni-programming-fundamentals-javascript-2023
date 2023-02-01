@@ -10,7 +10,6 @@ function rotateArrray(arr) {
     }
 
     console.log(workArr.join(' '));
-
 }
 
 rotateArrray(['1', '2', '3', '4', '2']);
