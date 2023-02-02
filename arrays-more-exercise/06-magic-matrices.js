@@ -34,9 +34,6 @@ function magicMatrix(matrixArr) {
     }
 
     console.log(isMagic);
-
-
-
 }
 
 magicMatrix([
