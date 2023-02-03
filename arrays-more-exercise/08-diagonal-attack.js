@@ -3,6 +3,7 @@ function checkDiagonals(stringMatrix) {
     let matrixSize = stringMatrix.length;
     let workArr = [...stringMatrix];
     let matrix = [];
+
     for (let i = 0; i < matrixSize; i++) {
         matrix[i] = workArr[i].split(' ');
     }
@@ -22,7 +23,6 @@ function checkDiagonals(stringMatrix) {
                     matrix[j][k] = sumOfRightDiagonals;
                 }
             }
-
         }
     }
 
