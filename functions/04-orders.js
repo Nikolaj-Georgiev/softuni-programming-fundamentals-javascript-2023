@@ -22,7 +22,7 @@ function orders(product, orderQuantity) {
             break;
     }
 
-    return result;
+    return result.toFixed(2);
 }
 
 console.log(orders("water", 5));
