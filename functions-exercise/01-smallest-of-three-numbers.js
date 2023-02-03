@@ -4,14 +4,12 @@ function smallestOfThree(numOne, numTwo, numThree) {
     result = isSmallest(numOne, numTwo);
     result = isSmallest(result, numThree);
 
-    console.log(result);
+    return result;
 
     function isSmallest(a, b) {
         let result = (a < b) ? a : b;
         return result;
     }
-
-
 }
 
 smallestOfThree(2, 5, 3);
