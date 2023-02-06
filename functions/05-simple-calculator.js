@@ -2,7 +2,6 @@ function simpleCalculator(numberOne, numberTwo, operator) {
 
     console.log(operation(operator, numberOne, numberTwo));
 
-
     function operation(operator, a, b) {
         let result = 0;
         switch (operator) {
