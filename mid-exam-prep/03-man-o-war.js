@@ -6,6 +6,13 @@ function manOWar(arr) {
     let sectionMaxHp = Number(workArr.shift());
     let isSunk = false;
 
+    let pirateTester = pirateShipArr.filter(x => x <= 0);
+    let manOWarTester = manOWarShipArr.filter(x => x <= 0);
+
+    if (pirateTester.length > 0 || manOWarTester.length > 0) {
+        return;
+    }
+
     let index = 0;
     while (workArr[index] !== 'Retire') {
         let currentCommand = workArr.shift().split(' ');
@@ -43,7 +50,7 @@ function manOWar(arr) {
     }
 
     function fire(shipArr, index, damage) {
-        if (index >= 0 && index <= shipArr.length) {
+        if (index >= 0 && index < shipArr.length) {
             let damagedSection = shipArr[index] - damage;
             if (damagedSection <= 0) {
                 console.log(`You won! The enemy ship has sunken.`);
@@ -71,7 +78,7 @@ function manOWar(arr) {
     }
 
     function repair(shipArr, index, health, maxHealth) {
-        if (index >= 0 && index <= shipArr.length) {
+        if (index >= 0 && index < shipArr.length) {
             let missingHealth = maxHealth - shipArr[index];
             let healedFor = Math.min(missingHealth, health);
             let newHp = shipArr[index] + healedFor;
@@ -94,6 +101,16 @@ console.log(manOWar(["12>13>11>20>66",
 ]));
 console.log('++++++++++++++++++++++++++++++++');
 console.log(manOWar(["2>3>4>5>2",
+    "6>7>8>9>10>11",
+    "20",
+    "Status",
+    "Fire 2 3",
+    "Defend 0 4 11",
+    "Repair 3 18",
+    "Retire"
+]));
+console.log('++++++++++++++++++++++++++++++++');
+console.log(manOWar(["0>0>0>0>0",
     "6>7>8>9>10>11",
     "20",
     "Status",
