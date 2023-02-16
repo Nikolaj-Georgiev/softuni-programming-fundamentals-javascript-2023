@@ -23,8 +23,6 @@ function blackFlag(array) {
     } else {
         return `Collected only ${((totalPlunder / targetPlunder) * 100).toFixed(2)}% of the plunder.`
     }
-
-
 }
 
 console.log(blackFlag(["5",
