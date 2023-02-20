@@ -29,7 +29,7 @@ function taxCalculator(input) {
         }
     }
 
-    return `The National Revenue Agency will collect ${totalTaxes} euros in taxes.`;
+    return `The National Revenue Agency will collect ${totalTaxes.toFixed(2)} euros in taxes.`;
 
     function taxation(car, years, kilometers, carArr) {
         let localTax = 0
