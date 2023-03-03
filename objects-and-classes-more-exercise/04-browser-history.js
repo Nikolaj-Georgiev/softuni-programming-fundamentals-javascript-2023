@@ -29,18 +29,23 @@ function browserHistory(browserObject, commandsArray) {
 
     }
 
-    console.log(browserObject['Browser Name']);
-    console.log(`Open Tabs: ${browserObject['Open Tabs'].join(', ')}`);
-    console.log(`Recently Closed: ${browserObject['Recently Closed'].join(', ')}`);
-    console.log(`Browser Logs: ${browserObject['Browser Logs'].join(', ')}`);
+    let result = `${browserObject['Browser Name']}
+Open Tabs: ${browserObject['Open Tabs'].join(', ')}
+Recently Closed: ${browserObject['Recently Closed'].join(', ')}
+Browser Logs: ${browserObject['Browser Logs'].join(', ')}`
+        // console.log(browserObject['Browser Name']);
+        // console.log(`Open Tabs: ${browserObject['Open Tabs'].join(', ')}`);
+        // console.log(`Recently Closed: ${browserObject['Recently Closed'].join(', ')}`);
+        // console.log(`Browser Logs: ${browserObject['Browser Logs'].join(', ')}`);
+    return result;
 }
 
-browserHistory({
+console.log(browserHistory({
     "Browser Name": "Google Chrome",
     "Open Tabs": ["Facebook", "YouTube", "Google Translate"],
     "Recently Closed": ["Yahoo", "Gmail"],
     "Browser Logs": ["Open YouTube", "Open Yahoo", "Open Google Translate", "Close Yahoo", "Open Gmail", "Close Gmail", "Open Facebook"]
-}, ["Close Facebook", "Open StackOverFlow", "Open Google"]);
+}, ["Close Facebook", "Open StackOverFlow", "Open Google"]));
 console.log('++++++++++++++');
 browserHistory({
     "Browser Name": "Mozilla Firefox",
