@@ -84,9 +84,8 @@ function schoolRegister(input) {
         let [key1, key2, key3] = Object.keys(obj);
         let [value1, value2, value3] = Object.values(obj);
 
-        console.log(`${key1} Grade\nList of students: ${value2}\nAverage annual score from last year: ${value3}\n`)
+        console.log(`${key1} Grade\nList of students: ${value2}\nAverage annual score from last year: ${value3}\n`);
     }
-
 
 }
 

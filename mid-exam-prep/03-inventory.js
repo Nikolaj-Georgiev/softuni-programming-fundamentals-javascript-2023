@@ -59,8 +59,6 @@ function inventory(input) {
             arr.push(renewedItem);
         }
     }
-
-
 }
 
 console.log(inventory([

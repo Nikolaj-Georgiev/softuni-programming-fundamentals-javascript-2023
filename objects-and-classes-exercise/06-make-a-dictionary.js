@@ -15,8 +15,6 @@ function dictionary(input) {
     for (let key of keys) {
         console.log(`Term: ${key} => Definition: ${newObj[key]}`)
     }
-
-
 }
 
 dictionary([

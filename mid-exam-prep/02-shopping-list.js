@@ -68,21 +68,21 @@ function shoppingList(input) {
     }
 }
 
-// console.log(shoppingList(["Tomatoes!Potatoes!Bread",
-//     "Unnecessary Milk",
-//     "Urgent Tomatoes",
-//     "Go Shopping!"
-// ]));
-// console.log('+++++++++++++++++++++++++++++');
-// console.log(shoppingList(["Milk!Pepper!Salt!Water!Banana",
-//     "Urgent Salt",
-//     "Unnecessary Grapes",
-//     "Correct Pepper Onion",
-//     "Rearrange Grapes",
-//     "Correct Tomatoes Potatoes",
-//     "Go Shopping!"
-// ]))
-// console.log('+++++++++++++++++++++++++++++');
+console.log(shoppingList(["Tomatoes!Potatoes!Bread",
+    "Unnecessary Milk",
+    "Urgent Tomatoes",
+    "Go Shopping!"
+]));
+console.log('+++++++++++++++++++++++++++++');
+console.log(shoppingList(["Milk!Pepper!Salt!Water!Banana",
+    "Urgent Salt",
+    "Unnecessary Grapes",
+    "Correct Pepper Onion",
+    "Rearrange Grapes",
+    "Correct Tomatoes Potatoes",
+    "Go Shopping!"
+]))
+console.log('+++++++++++++++++++++++++++++');
 console.log(shoppingList(["Milk!Pepper!Salt!Water!Banana",
     "Urgent Tortilla",
     "Unnecessary Pepper",

@@ -6,12 +6,12 @@ function manOWar(arr) {
     let sectionMaxHp = Number(workArr.shift());
     let isSunk = false;
 
-    let pirateTester = pirateShipArr.filter(x => x <= 0);
-    let manOWarTester = manOWarShipArr.filter(x => x <= 0);
+    // let pirateTester = pirateShipArr.filter(x => x <= 0);
+    // let manOWarTester = manOWarShipArr.filter(x => x <= 0);
 
-    if (pirateTester.length > 0 || manOWarTester.length > 0) {
-        return;
-    }
+    // if (pirateTester.length > 0 || manOWarTester.length > 0) {
+    //     return;
+    // }
 
     let index = 0;
     while (workArr[index] !== 'Retire') {
