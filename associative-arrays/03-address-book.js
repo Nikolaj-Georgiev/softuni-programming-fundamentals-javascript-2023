@@ -8,9 +8,7 @@ function addBook(input) {
 
     Object.keys(addressBook).sort((key1, key2) => key1.localeCompare(key2)).forEach(key => {
         console.log(`${key} -> ${addressBook[key]}`);
-    })
-
-
+    });
 }
 
 addBook(['Tim:Doe Crossing',
