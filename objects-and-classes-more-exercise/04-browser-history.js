@@ -32,11 +32,11 @@ function browserHistory(browserObject, commandsArray) {
     let result = `${browserObject['Browser Name']}
 Open Tabs: ${browserObject['Open Tabs'].join(', ')}
 Recently Closed: ${browserObject['Recently Closed'].join(', ')}
-Browser Logs: ${browserObject['Browser Logs'].join(', ')}`
-        // console.log(browserObject['Browser Name']);
-        // console.log(`Open Tabs: ${browserObject['Open Tabs'].join(', ')}`);
-        // console.log(`Recently Closed: ${browserObject['Recently Closed'].join(', ')}`);
-        // console.log(`Browser Logs: ${browserObject['Browser Logs'].join(', ')}`);
+Browser Logs: ${browserObject['Browser Logs'].join(', ')}`;
+    // console.log(browserObject['Browser Name']);
+    // console.log(`Open Tabs: ${browserObject['Open Tabs'].join(', ')}`);
+    // console.log(`Recently Closed: ${browserObject['Recently Closed'].join(', ')}`);
+    // console.log(`Browser Logs: ${browserObject['Browser Logs'].join(', ')}`);
     return result;
 }
 
