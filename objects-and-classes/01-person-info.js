@@ -53,8 +53,7 @@ function forthPerson(firstName, lastName, age) {
     person.lastName = lastName;
     person.age = Number(age);
 
-    console.log(person);
-
+    return person;
 }
 
 forthPerson("Peter",
