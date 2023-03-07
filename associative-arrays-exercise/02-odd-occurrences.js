@@ -16,13 +16,7 @@ function oddOcc(string) {
         .sort((a, b) => b[1] - a[1])
         .map(x => x.splice(0, 1));
 
-
-
     console.log(resultArr.join(' '));
-
-
-
-
 }
 
 oddOcc('Java C# Php PHP Java PhP 3 C# 3 1 5 C#');
