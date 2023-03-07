@@ -5,11 +5,10 @@ function wordOccurrences(input) {
     let tokens = input.join('|').split('|');
 
     for (let word of tokens) {
-        if (word in wordsObj) {
-            wordsObj[word]++;
-        } else {
-            wordsObj[word] = 1;
+        if (!(word in wordsObj)) {
+            wordsObj[word] = 0;
         }
+        wordsObj[word]++;
     }
 
     let entries = Object.entries(wordsObj).sort((a, b) => b[1] - a[1]);
