@@ -19,7 +19,7 @@ function wordTracker(input) {
     let keys = Object.entries(holdingObject).sort(([keyA, valueA], [keyB, valueB]) => valueB - valueA);
 
     for (let key of keys) {
-        console.log(`${key[0]} - ${holdingObject[key[0]]}`);
+        console.log(`${key[0]} - ${key[1]}`);
     }
 }
 
