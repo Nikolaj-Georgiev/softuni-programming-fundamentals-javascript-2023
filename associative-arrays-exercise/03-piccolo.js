@@ -18,10 +18,7 @@ function piccolo(input) {
         }
     }
 
-    let garageArr = [];
-    for (let car of garage) {
-        garageArr.push(car);
-    }
+    let garageArr = Array.from(garage);
 
     if (!garageArr.length) {
         console.log('Parking Lot is Empty');
