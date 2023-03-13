@@ -8,7 +8,7 @@ function oddOcc(string) {
         } else {
             holdingObject[string] = 1;
         }
-    });;
+    });
 
     let resultArr = [];
     resultArr = Object.entries(holdingObject)
