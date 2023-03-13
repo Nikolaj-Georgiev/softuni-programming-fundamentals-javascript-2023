@@ -16,8 +16,6 @@ function partyTime(input) {
     let vipArr = guestListArr.filter(x => (!isNaN(x[0][0])));
     let regularArr = guestListArr.filter(x => isNaN(x[0][0]));
     guestListArr = vipArr.concat(regularArr).forEach(guest => console.log(guest));
-
-
 }
 
 partyTime(['7IK9Yo0h',
