@@ -18,8 +18,6 @@ function schoolGrades(input) {
     for (let key of sorted) {
         console.log(`${key}: ${((students[key].reduce((a, c) => a + c, 0))/students[key].length).toFixed(2)}`);
     }
-
-
 }
 
 schoolGrades(['Lilly 4 6 6 5',
