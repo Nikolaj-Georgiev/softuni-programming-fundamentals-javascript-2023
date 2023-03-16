@@ -12,8 +12,8 @@ function garage(input) {
         garages.get(garageNumber).push(cars);
     }
 
-    for (let key of garages) {
-        let [garage, parkedCars] = key
+    for (let entries of garages) {
+        let [garage, parkedCars] = entries;
         console.log(`Garage № ${garage}`);
 
         for (let cars of parkedCars) {
