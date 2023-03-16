@@ -19,6 +19,7 @@ function garage(input) {
         for (let cars of parkedCars) {
             let result = '--- ';
             let localArr = [];
+
             for (let car of cars) {
                 localArr.push(car.split(': ').join(' - '));
             }
