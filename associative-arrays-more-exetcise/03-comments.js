@@ -16,9 +16,9 @@ function comments(input) {
                 let [article, comment] = tokens.split(': ');
                 let [commentName, commentContent] = comment.split(', ')
                 if (article in articles) {
-                    if (!comments.hasOwnProperty(article))
+                    if (!(article in comments))
                         comments[article] = {};
-                    if (!comments[article].hasOwnProperty(user)) {
+                    if (!(user in comments[article])) {
                         comments[article][user] = {
                             [commentName]: commentContent
                         }
