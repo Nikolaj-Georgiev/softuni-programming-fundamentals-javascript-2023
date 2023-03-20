@@ -18,6 +18,7 @@ function printCharacters1(string) {
     }
 
 }
+
 printCharacters1('AWord');
 console.log('++++++++++++++++');
 printCharacters1('Sentence');
