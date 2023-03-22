@@ -7,15 +7,9 @@ function revealWord(replacingWords, stringWithTemplates) {
             continue;
         }
 
-        let counter = word.length;
-        let checker = 0;
-
         for (let i = 0; i < stringWithTemplatesArr.length; i++) {
-            if (stringWithTemplatesArr[i].includes('*')) {
-                checker = stringWithTemplatesArr[i].length;
-                if (counter === checker) {
-                    stringWithTemplatesArr[i] = word;
-                }
+            if (stringWithTemplatesArr[i].includes('*') && stringWithTemplatesArr[i].length === word.length) {
+                stringWithTemplatesArr[i] = word;
             }
         }
     }
