@@ -7,15 +7,15 @@ function hashTag(text) {
         let start = workingText.indexOf(hashT);
         workingText = workingText.substring(start + 1);
 
-        let firstWord = '';
+        let searchedWord = '';
         for (let ch of workingText) {
-            if (ch === ' ' && firstWord.length === 0) {
+            if (ch === ' ' && searchedWord.length === 0) {
                 break;
             }
             if ((ch.charCodeAt(0) >= 97 && ch.charCodeAt(0) <= 122) || (ch.charCodeAt(0) >= 65 && ch.charCodeAt(0) <= 90)) {
-                firstWord += ch;
+                searchedWord += ch;
             } else if (ch !== ' ') {
-                firstWord = '';
+                searchedWord = '';
                 break;
             } else {
                 break;
@@ -23,8 +23,8 @@ function hashTag(text) {
 
         }
 
-        if (firstWord.length !== 0) {
-            console.log(firstWord);
+        if (searchedWord.length !== 0) {
+            console.log(searchedWord);
         }
     }
 }
