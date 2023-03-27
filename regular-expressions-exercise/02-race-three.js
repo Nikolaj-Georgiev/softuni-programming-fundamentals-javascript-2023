@@ -19,7 +19,13 @@ function race(input) {
                 currentPlayerDistance += +char;
             }
         }
-        namesArr.forEach(x => x.name === currentPlayer ? x.value += currentPlayerDistance : false);
+        // namesArr.forEach(x => x.name === currentPlayer ? x.value += currentPlayerDistance : false);
+        for (const player of namesArr) {
+            if (player.name === currentPlayer) {
+                player.value += currentPlayerDistance;
+                break;
+            }
+        }
     }
 
     namesArr.sort((a, b) => b.value - a.value);
