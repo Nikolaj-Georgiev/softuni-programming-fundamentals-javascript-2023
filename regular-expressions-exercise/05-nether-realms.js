@@ -23,7 +23,6 @@ function netherRealms(string) {
     listOfDemons.sort((a, b) => a.demonName.localeCompare(b.demonName)).forEach(demonObj => {
         console.log(`${demonObj.demonName} - ${demonObj.health} health, ${demonObj.damage.toFixed(2)} damage`);
     });
-
 }
 
 netherRealms('M3ph-0.5s-0.5t0.0**');
