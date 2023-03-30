@@ -33,7 +33,6 @@ function thePianist(input) {
     commandsArr = commandsArr.slice(initialPieces);
     for (const line of commandsArr) {
         let [command, ...tokens] = line.split('|');
-        let flag = false;
         switch (command) {
             case 'Add':
                 {
@@ -70,21 +69,13 @@ function thePianist(input) {
                 }
                 break;
             case 'Stop':
-                flag = true;
-                break;
-
+                for (const key in piecesCollection) {
+                    let piece = piecesCollection[key];
+                    piece.toPrint();
+                }
+                return;
         }
-        if (flag) {
-            break;
-        }
-
-
     }
-    for (const key in piecesCollection) {
-        let piece = piecesCollection[key];
-        piece.toPrint();
-    }
-
 }
 
 // thePianist([
