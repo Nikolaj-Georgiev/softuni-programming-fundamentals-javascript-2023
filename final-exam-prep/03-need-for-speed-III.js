@@ -7,7 +7,7 @@ function needForSpeed(input) {
         }
 
         drive(distance, fuel) {
-            if (!this.fuel >= fuel) {
+            if (this.fuel < fuel) {
                 console.log('Not enough fuel to make that ride');
                 return;
             }
@@ -32,7 +32,15 @@ function needForSpeed(input) {
 
         }
 
-        revert() {}
+        revert(kilometers) {
+            let newKm = this.mileage - kilometers;
+            if (newKm < 10000) {
+                this.mileage = 10000;
+                return;
+            }
+            this.mileage = newKm;
+            console.log(`${this.car} mileage decreased by ${kilometers} kilometers`);
+        }
 
     }
 
@@ -48,15 +56,18 @@ function needForSpeed(input) {
                 carsCollection[carName].drive(Number(tokens[0]), Number(tokens[1]));
                 break;
             case 'Refuel':
-                carsCollection[carName].refuel(Number(tokens[0]));
+                carsCollection[carName].refuel(+tokens[0]);
                 break;
             case 'Revert':
+                carsCollection[carName].revert(+tokens[0]);
+                break;
             case 'Stop':
+                for (const car in carsCollection) {
+                    console.log(`${car} -> Mileage: ${carsCollection[car].mileage} kms, Fuel in the tank: ${carsCollection[car].fuel} lt.`);
+                }
+                return;
         }
-
-    })
-
-
+    });
 }
 
 needForSpeed([
@@ -64,7 +75,7 @@ needForSpeed([
     'Audi A6|38000|62',
     'Mercedes CLS|11000|35',
     'Volkswagen Passat CC|45678|5',
-    'Drive : Audi A6 : 62000 : 47',
+    'Drive : Audi A6 : 543 : 47',
     'Drive : Mercedes CLS : 94 : 11',
     'Drive : Volkswagen Passat CC : 69 : 8',
     'Refuel : Audi A6 : 50',
