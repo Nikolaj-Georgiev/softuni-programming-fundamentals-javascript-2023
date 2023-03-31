@@ -28,7 +28,7 @@ function planDiscovery(input) {
         }
 
         toConsole() {
-            console.log(`${this.name}; Rarity: ${this.rarity}; Rating: ${(this.averageRating()).toFixed(2)}`);
+            console.log(`- ${this.name}; Rarity: ${this.rarity}; Rating: ${(this.averageRating()).toFixed(2)}`);
         }
     }
 
@@ -39,7 +39,7 @@ function planDiscovery(input) {
         plantsCollection[plantInfo[0]] = plant;
     });
 
-    let commandsArr = input.slice(Number(input[0]) + 1).forEach(line => {
+    input.slice(Number(input[0]) + 1).forEach(line => {
         let [command, tokens] = line.split(': ');
         if (command === 'Exhibition') return;
         let [plantName, value] = tokens.split(' - ');
