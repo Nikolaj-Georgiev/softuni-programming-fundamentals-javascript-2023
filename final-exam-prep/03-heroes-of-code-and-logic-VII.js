@@ -15,6 +15,7 @@ function heroes(input) {
             }
             console.log(`${this.name} does not have enough MP to cast ${spellName}!`);
         }
+
         takeDamage(damage, attacker) {
             let hpChecker = this.hp - damage;
             if (hpChecker > 0) {
@@ -25,16 +26,19 @@ function heroes(input) {
             console.log(`${this.name} has been killed by ${attacker}!`);
             delete heroesCollection[this.name];
         }
+
         recharge(amount) {
             let rechargeAmount = Math.min((200 - this.mp), amount);
             this.mp += rechargeAmount;
             console.log(`${this.name} recharged for ${rechargeAmount} MP!`);
         }
+
         heal(amount) {
             let rechargeAmount = Math.min((100 - this.hp), amount);
             this.hp += rechargeAmount;
             console.log(`${this.name} healed for ${rechargeAmount} HP!`);
         }
+
         toConsole() {
             console.log(`${this.name}\n  HP: ${this.hp}\n  MP: ${this.mp}`);
         }
