@@ -61,7 +61,6 @@ function wildZoo(input) {
             }
         });
     }
-
 }
 
 wildZoo([
